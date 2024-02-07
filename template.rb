@@ -117,7 +117,12 @@ after_bundle do
   # Create Simple form config file
   run "curl -L https://raw.githubusercontent.com/Jules-Pinsard/tailwind_template/master/simple_from_flowbite.rb > config/initializers/simple_form_flowbite.rb"
 
-  #Install Flowbite
+  #Install Flowbite via CDN
+  inject_into_file "app/views/layouts/application.html.erb", before: '<%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>' do
+    <<~HTML
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.turbo.min.js"></script>
+    HTML
+  end
 
   # Environments
   environment 'config.action_mailer.default_url_options = { host: "http://localhost:3000" }', env: "development"
