@@ -12,7 +12,7 @@ Run the following command to start your project with this template
 rails new \
   -d postgresql \
   --css tailwind \
-  -m  \
+  -m https://raw.githubusercontent.com/Jules-Pinsard/tailwind_template/master/template.rb \
   CHANGE_THIS_TO_YOUR_RAILS_APP_NAME
 ```
 Run your local development server with

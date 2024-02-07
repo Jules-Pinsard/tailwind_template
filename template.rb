@@ -132,5 +132,5 @@ after_bundle do
   # Git
   git :init
   git add: "."
-  git commit: "-m 'Rails new with  (Tailwind forms)'"
+  git commit: "-m 'Rails new with https://raw.githubusercontent.com/Jules-Pinsard/tailwind_template/master/template.rb (Tailwind forms)'"
 end
